@@ -1,0 +1,103 @@
+<template>
+       <Particles
+      id="tsparticles"
+      :options="{
+            background: {
+                color: {
+                    value: '#518af5'
+                }
+            },
+            fpsLimit: 60,
+            interactivity: {
+                detectsOn: 'canvas',
+                events: {
+                    onClick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    onHover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    resize: true
+                },
+                modes: {
+                    bubble: {
+                        distance: 400,
+                        duration: 3,
+                        opacity: 0.8,
+                        size: 40
+                    },
+                    push: {
+                        quantity: 4
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 1
+                    }
+                }
+            },
+            particles: {
+                color: {
+                    value: '#ffffff'
+                },
+                links: {
+                    color: '#ffffff',
+                    distance: 150,
+                    enable: true,
+                    opacity: 0.5,
+                    width: 2
+                },
+                collisions: {
+                    enable: true
+                },
+                move: {
+                    direction: 'none',
+                    enable: true,
+                    outMode: 'bounce',
+                    random: false,
+                    speed: 6,
+                    straight: false
+                },
+                number: {
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    },
+                    value: 80
+                },
+                opacity: {
+                    value: 0.5
+                },
+                shape: {
+                    type: 'circle'
+                },
+                size: {
+                    random: true,
+                    value: 5
+                }
+            },
+            detectRetina: true
+        }"
+    />
+</template>
+<script lang="ts">
+import Vue from 'vue'
+import Particles from 'particles.vue'
+// 类型处理
+declare module 'particles.vue';
+Vue.use(Particles)
+export default Vue.extend({
+  name: 'particles'
+})
+</script>
+<style lang="stylus" scoped>
+    #tsparticles
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        opacity 0.4
+</style>
