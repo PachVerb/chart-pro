@@ -1,7 +1,7 @@
 <template>
     <div class="log-content">
        <div class="log1">
-           <h1>col-1</h1>
+           <dv-decoration-4 :reverse="true" style="width:250px;height:5px;" />
        </div>
        <div class="log2">
            <h1>col-2</h1>
@@ -25,6 +25,7 @@ export default class Log extends Vue {
         display flex
         flex-direction column
         div
+            min-width: 400px
             border 1px solid red
             flex-grow 1
             margin-bottom 10px
