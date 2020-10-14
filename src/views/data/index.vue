@@ -149,7 +149,7 @@
               <h2>智能工厂可视化</h2>
             </div>
           </div>
-          <dv-border-box-1>
+          <dv-border-box-1 class="border-box">
             <div class="content">
               <div class="part1">
                 <Machin />
@@ -216,9 +216,18 @@ export default class Index extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
+computed_restHeight(a, b)
+  a = unit(a, px)
+  b = unit(b, px)
+  return a - b
+
 .back
+  position relative
   margin: -12px
   background:hsla(0, 0%, 100%, .3)
+  .back::before
+    background url('../../assets/bg-2.jpg') 0 / cover fixed
+    filter blur(20px)
   .show
     position fixed
     top:0;
@@ -228,6 +237,7 @@ export default class Index extends Vue {
     height: 100%
   .top-header
     position relative
+    height 80px
     display flex
     justify-content space-around
     align-items center
@@ -236,12 +246,12 @@ export default class Index extends Vue {
       top:0
       left: 50%;
       transform translateX(-50%)
-  .content
-    display: flex
-    height: 100%
-    padding: 15px;
-    div
-      flex-grow 1
-    .middle
-      flex-grow: 2
+  .border-box
+    height: calc(100% - 80px)
+    .content
+      display: flex
+      height: 100%
+      padding: 15px;
+      .middle
+        flex-grow: 2
 </style>>

@@ -12,5 +12,8 @@ declare module '@jiaminghi/data-view' {
     export const decoration5: any
     export const decoration9: any 
     export const decoration8: any 
+    export const decoration10: any 
+    export const decoration4: any 
     export const capsuleChart: any 
+    export const scrollBoard: any
 }
