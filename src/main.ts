@@ -16,7 +16,8 @@ import {
   decoration5,
   borderBox3,
   borderBox2,
-  scrollBoard
+  scrollBoard,
+  activeRingChart
 } from '@jiaminghi/data-view'
 import Echart from 'echarts'
 import '@/assets/css/normalize.css'
@@ -33,6 +34,7 @@ Vue.use(decoration4)
 Vue.use(decoration9)
 Vue.use(decoration10)
 Vue.use(scrollBoard)
+Vue.use(activeRingChart)
 Vue.use(Http)
 Vue.prototype.$echarts = Echart
 Vue.prototype.$stomp = Stomp
