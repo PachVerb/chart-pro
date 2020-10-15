@@ -48,7 +48,13 @@ export default class Machain extends Vue {
 
     config: Config = {
       header: ['记录时间', '设备', '参数', '参数状态'],
-      data: [['8:49:47', 'KCXL-003', '设备某参数', '012234']],
+      data: [
+        ['8:49:47', 'KCXL-003', '设备某参数', '012234'],
+        ['8:49:47', 'KCXL-003', '设备某参数', '012234'],
+        ['8:49:47', 'KCXL-003', '设备某参数', '012234'],
+        ['8:49:47', 'KCXL-003', '设备某参数', '012234'],
+        ['8:49:47', 'KCXL-003', '设备某参数', '012234']
+      ],
       carousel: 'page',
       columnWidth: [80, 90, 140, 80]
     }
@@ -78,6 +84,7 @@ export default class Machain extends Vue {
         const time = Formate(collect_date)
         // eslint-disable-next-line @typescript-eslint/camelcase
         item.push([time, machine_code, code, float_value])
+        if (item.length > 78) { item.shift() }
         This.config = {
           header: ['记录时间', '设备', '参数', '参数状态'],
           data: item,
@@ -100,7 +107,7 @@ export default class Machain extends Vue {
   }
 
   mounted () {
-    this.getLink()
+    // this.getLink()
   }
 }
 </script>

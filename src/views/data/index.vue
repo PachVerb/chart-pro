@@ -142,9 +142,9 @@
       <v-container>
         <dv-full-screen-container style="height: 100%;">
           <div class="top-header">
-            <dv-decoration-8 style="width:300px;height:50px;" />
+            <dv-decoration-8 style="width:300px;height:50px; position: absolute; top: 0; left: 0" />
             <dv-decoration-5 style="width:500px;height:60px;">智能工厂可视化</dv-decoration-5>
-            <dv-decoration-8 :reverse="true" style="width:300px;height:50px;" />
+            <dv-decoration-8 :reverse="true" style="width:300px;height:50px;  position: absolute; top: 0; right: 0" />
             <div class="top-title">
               <h2>智能工厂可视化</h2>
             </div>
@@ -224,7 +224,7 @@ computed_restHeight(a, b)
 .back
   position relative
   margin: -12px
-  background:hsla(0, 0%, 100%, .3)
+  background:hsla(0, 0%, 100%, .1)
   .back::before
     background url('../../assets/bg-2.jpg') 0 / cover fixed
     filter blur(20px)
@@ -237,10 +237,10 @@ computed_restHeight(a, b)
     height: 100%
   .top-header
     position relative
-    height 80px
     display flex
     justify-content space-around
     align-items center
+    height 80px
     .top-title
       position absolute
       top:0

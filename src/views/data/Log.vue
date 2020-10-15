@@ -1,13 +1,13 @@
 <template>
     <div class="log-content">
        <div class="log1">
-           <!-- <dv-active-ring-chart :config="config" style="width:200px;height:200px" /> -->
+          <dv-border-box-3>dv-border-box-3</dv-border-box-3>
        </div>
        <div class="log2">
-           <h1>col-2</h1>
+          <dv-border-box-3>dv-border-box-3</dv-border-box-3>
        </div>
        <div class="log3">
-           <h1>col-3</h1>
+          <dv-border-box-3>dv-border-box-3</dv-border-box-3>
        </div>
     </div>
 </template>
@@ -64,7 +64,6 @@ export default class Log extends Vue {
         flex-direction column
         div
             min-width: 400px
-            border 1px solid red
             flex-grow 1
             margin-bottom 10px
 </style>

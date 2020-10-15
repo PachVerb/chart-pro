@@ -8,10 +8,13 @@ import Stomp from 'stompjs'
 import {
   borderBox1,
   borderBox5,
+  borderBox7,
+  decoration2,
   decoration8,
   decoration4,
   decoration9,
   decoration10,
+  decoration12,
   fullScreenContainer,
   decoration5,
   borderBox3,
@@ -28,11 +31,14 @@ Vue.use(borderBox1)
 Vue.use(borderBox3)
 Vue.use(borderBox2)
 Vue.use(borderBox5)
+Vue.use(borderBox7)
+Vue.use(decoration2)
 Vue.use(decoration5)
 Vue.use(decoration8)
 Vue.use(decoration4)
 Vue.use(decoration9)
 Vue.use(decoration10)
+Vue.use(decoration12)
 Vue.use(scrollBoard)
 Vue.use(activeRingChart)
 Vue.use(Http)
